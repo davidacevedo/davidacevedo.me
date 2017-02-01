@@ -1,0 +1,32 @@
+.comingSoon {
+  align-items: center;
+  display: flex;
+  height: calc(100% - 64px);
+  justify-content: center;
+}
+
+.title {
+  font: 400 24px Montserrat;
+}
+
+.circle {
+  animation: fadeInOut 5s linear infinite;
+  background-color: rgba(black, 0);
+  border: 2px solid black;
+  border-radius: 1000px;
+  height: 300px;
+  position: absolute;
+  width: 300px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    background-color: rgba(black, 0);
+  }
+  50% {
+    background-color: rgba(black, 1);
+  }
+  100% {
+    background-color: rgba(black, 0);
+  }
+}
