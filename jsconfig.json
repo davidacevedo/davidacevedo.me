@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "target": "ES6"
+    },
+    "exclude": [
+        "dist",
+        "webpack",
+        "public",
+        "node_modules",
+        "bin",
+        ".vscode"
+    ],
+    "include": [
+        "src/**/*"
+    ]
+}
