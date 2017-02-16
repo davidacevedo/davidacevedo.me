@@ -1,15 +1,14 @@
 import path from 'path';
 import webpack from 'webpack';
+import merge from 'webpack-merge';
+import devConfig from './development.config';
+import prodConfig from './production.config';
 
 const TARGET = process.env.npm_lifecycle_event;
 process.env.BABEL_ENV = TARGET;
 
-module.exports = {
-  entry: [
-    'babel-polyfill',
-    'webpack-hot-middleware/client',
-    __dirname + '/../src/index.js',
-  ],
+const config = {
+  entry: `${__dirname}/../src/index.js`,
   
   output: {
     filename: 'bundle.js',
@@ -47,6 +46,21 @@ module.exports = {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: /node_modules/,
+      options: {
+        "presets": ["react", ["es2015", { "modules": false }], "stage-2"],
+        "plugins": [
+          "transform-object-assign",
+          "transform-decorators-legacy"
+        ],
+        "env": {
+          "start": {
+            "presets": ["react-hmre"]
+          }
+        }
+      }
+    }, {
+      test: /\.(png|jpg|jpeg|gif)$/,
+      loader: 'file-loader',
     }, {
       test: /\.scss$/,
       use: [
@@ -67,9 +81,6 @@ module.exports = {
         'style-loader',
         'css-loader',
       ]
-    }, {
-      test: /\.(png|jpg|jpeg|gif)$/,
-      loader: 'file-loader',
     }]
   },
 
@@ -79,7 +90,11 @@ module.exports = {
         includePaths: [path.resolve(__dirname, '../src')],
       }
     }),
-    new webpack.HotModuleReplacementPlugin(),
-
   ],
+}
+
+if (process.env.NODE_ENV === 'development') {
+  module.exports = merge(config, devConfig);
+} else if (process.env.NODE_ENV === 'production') {
+  module.exports = merge(config, prodConfig);
 }

@@ -1,4 +1,4 @@
-@import 'normalize.css/normalize.css';
+@import 'sanitize.css/sanitize.css';
 
 @font-face {
   font-family: "Bakery";
@@ -26,13 +26,17 @@
     font-family: Roboto;
   }
 
-  html {
-    height: 100vh;
-  }
+  // html {
+  //   height: 100vh;
+  // }
 
-  body {
-    min-height: 100vh;
-  }
+  // body {
+  //   min-height: 100vh;
+  // }
+
+  // *, *:before, *:after {
+  //   box-sizing: border-box;
+  // }
 }
 
 .app {

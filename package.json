@@ -4,7 +4,7 @@
   "description": "Personal website of mine",
   "main": "server.js",
   "scripts": {
-    "build": "babel-node build.js",
+    "build": "cross-env NODE_ENV=production babel-node build.js",
     "start": "cross-env NODE_ENV=development node bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -36,10 +36,12 @@
     "sass-loader": "^4.1.1",
     "style-loader": "^0.13.1",
     "url-loader": "^0.5.7",
-    "webpack": "^2.2.0"
+    "webpack": "^2.2.0",
+    "webpack-merge": "^2.6.1"
   },
   "devDependencies": {
     "cross-env": "^3.1.4",
+    "webpack-dashboard": "^0.3.0",
     "webpack-dev-middleware": "^1.9.0",
     "webpack-hot-middleware": "^2.15.0"
   }
