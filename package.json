@@ -8,6 +8,10 @@
     "start": "cross-env NODE_ENV=development node bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidacevedo/davidacevedo.me.git"
+  },
   "author": "David Acevedo",
   "license": "ISC",
   "dependencies": {
