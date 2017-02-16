@@ -7,7 +7,7 @@ import About from 'components/About';
 export default class About extends Component {
   render() {
     return (
-      
+      <About />
     )
   }
 }

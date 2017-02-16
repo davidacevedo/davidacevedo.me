@@ -29,16 +29,16 @@ const config = {
   module: {
     rules: [{
       test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?limit=1000&mimetype=application/font-woff',
+      loader: 'file-loader?limit=1000&mimetype=application/font-woff',
     }, {
       test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?limit=1000&mimetype=application/font-woff2',
+      loader: 'file-loader?limit=1000&mimetype=application/font-woff2',
     }, {
       test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?limit=1000&mimetype=application/octet-stream',
+      loader: 'file-loader?limit=1000&mimetype=application/octet-stream',
     }, {
       test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
-      loader: 'url-loader?limit=1000&mimetype=application/font-otf',
+      loader: 'file-loader?limit=1000&mimetype=application/font-otf',
     }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
