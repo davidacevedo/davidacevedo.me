@@ -41,17 +41,25 @@
 
 .app {
     align-items: center;
-    background-color: #64B5F6;
+    background-color: #222326;
+    // background-color: #f7f7f7;
+    // background-size: cover;
+    // background-image: url('../../components/About/Profile/assets/space.jpg');    // background-color: #f7f7f7;
+    // background-size: cover;
+    // background-image: url('../../components/About/Profile/assets/space.jpg');
     display: flex;
     flex-direction: column;
     font-family: 'Bakery';
-    min-height: 100vh;
-    min-width: 100vw;
+    // min-height: 100vh;
+    // min-width: 100vw;
     width: 100%;
 }
 
 .content {
+    display: flex;
     flex: 1 0 auto;
-    max-width: 1160px;
+    // max-width: 1160px;
+    justify-content: center;
     position: relative;
+    width: 100%; 
 }

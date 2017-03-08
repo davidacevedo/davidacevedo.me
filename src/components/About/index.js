@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
-import Profile from './Profile';
+import Banner from './Banner';
+import Me from './Me';
 
 import styles from './styles.scss';
 
 export default class About extends Component {
   render() {
     return (
-      <div className={styles.about}>
-        <Profile />
+      <div ref="about" className={styles.about}>
+        <Banner />
+        <Me />
       </div>
     )
   }
