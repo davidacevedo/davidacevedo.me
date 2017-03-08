@@ -26,12 +26,9 @@
     font-family: Roboto;
   }
 
-  // html {
-  //   height: 100vh;
-  // }
-
+  // html,
   // body {
-  //   min-height: 100vh;
+  //   height: 100%;
   // }
 
   // *, *:before, *:after {
@@ -52,6 +49,7 @@
     font-family: 'Bakery';
     // min-height: 100vh;
     // min-width: 100vw;
+    height: 100%;
     width: 100%;
 }
 
