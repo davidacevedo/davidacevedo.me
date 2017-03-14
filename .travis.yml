@@ -17,6 +17,6 @@ deploy:
   cache_control:
     - max-age=10
     - no-cache:
-      index.html
+      - index.html
   on:
     repo: davidacevedo/davidacevedo.me
