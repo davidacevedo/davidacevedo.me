@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-- '6'
+- '7'
 before_deploy:
 - npm run build
 - cp public/index.html dist/index.html
