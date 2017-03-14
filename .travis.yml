@@ -14,5 +14,6 @@ deploy:
   local_dir: dist
   acl: public_read
   region: us-west-1
+  skip_cleanup: true
   on:
     repo: davidacevedo/davidacevedo.me
