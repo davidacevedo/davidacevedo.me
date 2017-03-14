@@ -4,7 +4,6 @@ node_js:
 before_deploy:
 - npm run build
 - cp public/index.html dist/index.html
-- ls
 deploy:
   provider: s3
   access_key_id: AKIAJSPODGDERCZ7VGUA
@@ -15,5 +14,9 @@ deploy:
   acl: public_read
   region: us-west-1
   skip_cleanup: true
+  cache_control:
+    - max-age=10
+    - no-cache:
+      index.html
   on:
     repo: davidacevedo/davidacevedo.me
