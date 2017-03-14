@@ -13,5 +13,6 @@ deploy:
   bucket: davidacevedo.me
   file_glob: true
   acl: public_read
+  region: us-west-1
   on:
     repo: davidacevedo/davidacevedo.me
