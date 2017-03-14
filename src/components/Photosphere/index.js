@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import * as THREE from 'THREE';
+import * as THREE from 'three';
 
 import image from './assets/panorama.jpg';
 
