@@ -1,4 +1,18 @@
 language: node_js
 node_js:
-  - "iojs"
-  - "6"
+- iojs
+- '6'
+before_deploy:
+- npm run build
+- cp public/index.html dist/index.html
+- export RELEASE_PKG_FILE=$(ls *.deb)
+deploy:
+  provider: s3
+  access_key_id: AKIAJSPODGDERCZ7VGUA
+  secret_access_key:
+    secure: d0SPAz0Kva32vFZ3wvxQK1h4GkitrNjG8ODJr9E0Dv1JoZd/0Jkq3ovf4O0H1e/MH8pH6ewalGTbhHATsoUDsLKImu07xwWs87I2k1p2XU+PATBmjRboiV99KCUK8MouerA+pBxUIP1zCl3XDe/Yf/GqIOlQsQf2xc3sm/x3ZwLGOolJ8nn2qoAyef7FSK2bWlySK+pe2l4AOvlvy74gRx3/x3fApOkBpC2LKUZKCB4ysVrAOvrS+3p/m21KDDb3xfM1YTFtp2GQCsqipwzYg0GJTNWAi0tYquVAW4F8DeYt20JswDWDDxpl2yUlkOvUy2BDOJabOkK9BiGS+vk0M2wZIdE4H31sIFCfjOGeOG71RC5KUxnMYX0vzXZg9JXLOzw+6aP2gXEEnt9dn11Kxv2eDhgpWnuBaHhJWNRT8lx/EErGQiWNjdFu2sBgZ/zNXG8r9CDBxvWkCCrezORl5n1AgXuv2JjhP2izwGl5hQ4MJ2K/gXI6d8EEhV8A15G0k6KAFphB9zxiMoGQEkgG1UXD4iZSbR61GggPDrSrTFET9VchQwr/JH7tar2HETv2EmjPYLYsf5yu9T1xYHgPAu0cW4xAjsziWabdStuaA5CrWuHk9u0J3fRvhlWr2g9fCvSJHA1utzkxNQhdQBw1x92yEF/2A5LQoa85Im4D1KQ=
+  bucket: davidacevedo.me
+  file_glob: true
+  acl: public_read
+  on:
+    repo: davidacevedo/davidacevedo.me
