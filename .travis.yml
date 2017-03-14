@@ -2,8 +2,8 @@ language: node_js
 node_js:
 - '7'
 before_deploy:
-- npm run build
-- mkdir index
+- ls -d build || npm run build
+- ls -d index || mkdir index
 - cp public/index.html index/index.html
 deploy:
   - provider: s3
