@@ -4,7 +4,7 @@ node_js:
 before_deploy:
 - npm run build
 - cp public/index.html dist/index.html
-- export RELEASE_PKG_FILE=$(ls *.deb)
+- ls
 deploy:
   provider: s3
   access_key_id: AKIAJSPODGDERCZ7VGUA
