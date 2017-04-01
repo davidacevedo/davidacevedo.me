@@ -14,8 +14,10 @@ export default class Banner extends Component {
           <div className={styles.profileJob}>Software Engineer</div>
           <div className={styles.myName}>David Acevedo</div>
         </div>
-        <div className={styles.title}>print("Hello World")</div>
+        <div className={styles.textContent}>
+          <div className={styles.title}>Hello World</div>
+        </div>
       </div>
-    )
+    );
   }
 }

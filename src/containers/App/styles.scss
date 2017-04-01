@@ -23,6 +23,7 @@
   span,
   header,
   footer {
+    color: #3c4350;
     font-family: Roboto;
   }
 
@@ -38,7 +39,7 @@
 
 .app {
     align-items: center;
-    background-color: #222326;
+    background-color: #f2f2f2;
     // background-color: #f7f7f7;
     // background-size: cover;
     // background-image: url('../../components/About/Profile/assets/space.jpg');    // background-color: #f7f7f7;
@@ -54,11 +55,10 @@
 }
 
 .content {
-    background-color: #222326;
     display: flex;
     flex: 1 0 auto;
-    // max-width: 1160px;
     justify-content: center;
     position: relative;
     width: 100%; 
+    z-index: 1;
 }
