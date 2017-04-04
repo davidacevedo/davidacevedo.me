@@ -11,6 +11,6 @@ export default class About extends Component {
         <Banner />
         <Me />
       </div>
-    )
+    );
   }
 }

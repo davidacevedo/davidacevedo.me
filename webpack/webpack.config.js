@@ -22,6 +22,7 @@ const config = {
     alias: {
       components: `${__dirname}/../src/components`,
       containers: `${__dirname}/../src/containers`,
+      utils: `${__dirname}/../src/utils`,
       styles: `${__dirname}/../src/styles`,
     }
   },

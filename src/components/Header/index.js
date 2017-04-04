@@ -19,7 +19,6 @@ export default class Header extends Component {
           <Link className={styles.test} to="test">Test</Link>
           <img className={styles.profile} src={profile} />
         </div>
-        {/*<div className={styles.padding} />*/}
       </header>
     )
   }
