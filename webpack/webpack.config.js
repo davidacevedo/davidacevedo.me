@@ -1,8 +1,8 @@
-import path from 'path';
-import webpack from 'webpack';
-import merge from 'webpack-merge';
-import devConfig from './development.config';
-import prodConfig from './production.config';
+const path = require('path');
+const webpack = require('webpack');
+const merge = require('webpack-merge');
+const devConfig = require('./development.config');
+const prodConfig = require('./production.config');
 
 const TARGET = process.env.npm_lifecycle_event;
 process.env.BABEL_ENV = TARGET;

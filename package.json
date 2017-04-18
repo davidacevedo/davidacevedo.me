@@ -4,8 +4,8 @@
   "description": "Personal website of mine",
   "main": "server.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel-node build.js",
-    "start": "cross-env NODE_ENV=development node bin/server.js",
+    "build": "cross-env NODE_ENV=production node build.js",
+    "start": "cross-env NODE_ENV=development node server.js",
     "test": "echo \"Error: no test specified\" && exit 0"
   },
   "repository": {
@@ -50,8 +50,8 @@
   },
   "devDependencies": {
     "cross-env": "^3.1.4",
-    "webpack-dashboard": "^0.3.0",
     "webpack-dev-middleware": "^1.9.0",
-    "webpack-hot-middleware": "^2.15.0"
+    "webpack-hot-middleware": "^2.15.0",
+    "webpack-visualizer-plugin": "^0.1.11"
   }
 }

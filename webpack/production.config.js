@@ -1,4 +1,5 @@
-import webpack from 'webpack';
+const webpack = require('webpack');
+const Visualizer = require('webpack-visualizer-plugin');
 
 module.exports = {
   devtool: 'cheap-module-source-map',
@@ -17,6 +18,9 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
-    })
+    }),
+    new Visualizer({
+      filename: './statistics.html',
+    }),
   ]
 }

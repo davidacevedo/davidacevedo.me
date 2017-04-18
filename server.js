@@ -1,9 +1,9 @@
-import express from 'express';
-import webpack from 'webpack';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
-import webpackConfig from './webpack/webpack.config';
-import bodyParser from 'body-parser';
+const express = require('express');
+const webpack = require('webpack');
+const webpackDevMiddleware = require('webpack-dev-middleware');
+const webpackHotMiddleware = require('webpack-hot-middleware');
+const webpackConfig = require('./webpack/webpack.config');
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = process.env.PORT || 3000;
