@@ -1,5 +1,19 @@
 .photosphere {
   background-color: black;
   width: 100%;
-  height: calc(100% - 64px);
+  height: 100%;
+}
+
+.credit {
+  bottom: 0;
+  color: white;
+  position: absolute;
+
+  a {
+    color: white;
+  }
+
+  a:visited {
+    color: white;
+  }
 }

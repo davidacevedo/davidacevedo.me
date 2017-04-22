@@ -1,0 +1,42 @@
+.profile {
+  align-items: center;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 3px 1px 0 rgba(0, 0, 0, .04), 0 1px 0 0 #e2e2e2;
+  display: flex;
+  min-height: 310px;
+  padding: 30px;
+  width: 100%;
+}
+
+.title {
+  font: 300 30px Roboto;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.profileContainer {
+  align-items: center;
+  background-color: white;
+  border: 1px solid #f2f2f2;
+  border-radius: 3px;
+  box-shadow: 0 10px 15px 0 rgba(80, 93, 118, .15);
+  display: flex;
+  flex-direction: column;
+  font: 700 16px Roboto;
+  height: 250px;
+  width: 183px;
+  z-index: 1;
+
+  .profileImage {
+    height: 180px;
+    margin-top: 10px;
+    width: 163px;
+  }
+}
+
+.profile {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
