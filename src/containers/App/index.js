@@ -5,6 +5,14 @@ import Sidebar from 'components/Sidebar';
 import styles from './styles.scss';
 
 export default class App extends Component {
+  state = {
+    sidebarExpanded: false,
+  };
+
+  expandSidebar = () => {
+
+  }
+
   render() {
     const { children } = this.props;
 

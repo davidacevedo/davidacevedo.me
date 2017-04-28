@@ -27,9 +27,9 @@ self.addEventListener('push', function(event) {
       sendMessageToClient(client).then(m => console.log('sw received message')).catch(err => console.log(err));
     });
   });
-  // event.waitUntil(  
-  //   self.registration.showNotification(title, {  
-  //     body: body,
-  //   })
-  // );  
+  event.waitUntil(  
+    self.registration.showNotification(title, {  
+      body: body,
+    })
+  );  
 });

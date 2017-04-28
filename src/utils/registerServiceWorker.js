@@ -66,6 +66,8 @@ export default function registerServiceWorker() {
       }).then(subscription => {
         console.log('Current subscription');
         console.log(subscription);
+        console.log(subscription.endpoint);
+        sendSubscriptionToServer(subscribe);
         // console.log(subscription.unsubscribe);
         // subscription.unsubscribe()
 
