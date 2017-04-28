@@ -8,7 +8,7 @@ export default class Me extends Component {
       <div className={styles.me}>
         <div className={styles.title}>About Me</div>
         <div className={styles.description}>
-          I'm a passionate Frontend Developer.
+          I'm a Frontend Developer.
         </div>
       </div>
     );
