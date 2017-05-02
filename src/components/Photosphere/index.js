@@ -29,10 +29,7 @@ export default class Photosphere extends Component {
         render();
       }),
     });
-    // var material = new THREE.MeshFaceMaterial( [
-    // new THREE.MeshBasicMaterial( { map: THREE.ImageUtils.loadTexture( image ) } ),] );
-    // const cube = new THREE.Mesh( geometry, material );
-    // const texture = THREE.ImageUtils.loadTexture(image);
+
     const sphere = new THREE.Mesh(
 			geometry,
 			material,
@@ -45,9 +42,6 @@ export default class Photosphere extends Component {
     const controls = new OrbitControls(camera, renderer.domElement);
     controls.target = new THREE.Vector3(0, 1, 0);
     controls.enablePan = true;
-    controls.enableZoom = true;
-    // controls.autoRotate = true;
-    // controls.autoRotateSpeed = 0.5;
     
     // controls.addEventListener('change', render);
 
@@ -71,23 +65,6 @@ export default class Photosphere extends Component {
       camera.updateProjectionMatrix();
     }
     window.addEventListener('resize', this.resizeFunction);
-    
-
-
-    // const sphere = new THREE.Mesh(
-    //   new THREE.SphereGeometry(100, 32, 32),
-    //   new THREE.MeshBasicMaterial({
-    //     map: THREE.TextureLoader(image),
-    //   })
-    // );
-
-    // render();
-    // requestAnimationFrame(render);
-    // render();
-    // render();
-    // render();
-    // render();
-
   }
 
   componentWillUnmount() {

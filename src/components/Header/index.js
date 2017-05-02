@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 import profile from './assets/profile.jpg';
+import hamburger from './assets/hamburger.svg';
 
 import styles from './styles.scss';
 
@@ -12,12 +13,12 @@ export default class Header extends Component {
 
   render() {
     const { router } = this.context;
+    const { toggleSidebar } = this.props;
     return (
       <header className={styles.header}>
         <div className={styles.headerItems}>
-          <div className={styles.title} onClick={() => router.push('/')}>davidacevedo.me</div>
-          <Link className={styles.test} to="test">Test</Link>
-          <img className={styles.profile} src={profile} />
+          <img className={styles.hamburger} onClick={toggleSidebar} src={hamburger} />
+          <Link className={styles.title} to="/">davidacevedo.me</Link>
         </div>
       </header>
     )

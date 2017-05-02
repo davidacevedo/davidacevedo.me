@@ -43,6 +43,9 @@ const config = {
     }, {
       test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader?name=fonts/[hash].[ext]',
+    }, { 
+      test: /\.svg$/,
+      loader: 'file-loader?limit=10000&name=icons/[hash].[ext]',
     }, {
       test: /\.js$/,
       loader: 'babel-loader',

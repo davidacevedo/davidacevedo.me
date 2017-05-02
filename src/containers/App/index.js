@@ -9,18 +9,31 @@ export default class App extends Component {
     sidebarExpanded: false,
   };
 
-  expandSidebar = () => {
+  toggleSidebar = (event) => {
+    event.stopPropagation();
+    this.setState({ sidebarExpanded: !this.state.sidebarExpanded });
+  };
 
-  }
+  closeSidebar = () => {
+    this.setState({ sidebarExpanded: false });
+  };
+
+  componentWillMount() {
+    window.addEventListener('click', this.closeSidebar);
+  };
+
+  componentWillUnmount() {
+    window.removeEventListener('click', this.closeSidebar);
+  };
 
   render() {
     const { children } = this.props;
 
     return (
       <div className={styles.app}>
-        <Header />
+        <Header toggleSidebar={this.toggleSidebar} />
         <div className={styles.main}>
-          <Sidebar />
+          <Sidebar sidebarExpanded={this.state.sidebarExpanded} closeSidebar={this.closeSidebar}/>
           <div className={styles.content}>{children}</div>
         </div>
       </div>

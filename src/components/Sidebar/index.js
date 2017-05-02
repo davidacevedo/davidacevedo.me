@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import classnames from 'classnames';
+import { Link } from 'react-router';
 
 import profile from './assets/sidebar-pic.jpg';
 import styles from './styles.scss';
@@ -10,16 +12,17 @@ export default class Sidebar extends Component {
 
   render() {
     const { router } = this.context;
+    const { closeSidebar, sidebarExpanded } = this.props;
 
     return (
-      <div className={styles.sidebar}>
+      <div className={classnames(styles.sidebar, sidebarExpanded && styles.sidebarExpanded)} onClick={event => event.stopPropagation()}>
         <div className={styles.header}>
           <img className={styles.profileImage} src={profile} />
           <div className={styles.name}>David Acevedo</div>
         </div>
         
-        <div className={styles.about} onClick={() => router.replace('/')}>About</div>
-        <div className={styles.about} onClick={() => router.replace('/test')}>Test</div>
+        <Link className={styles.about} onClick={closeSidebar} to="/">About</Link>
+        <Link className={styles.about} onClick={closeSidebar} to="/test">Test</Link>
       </div>
     )
   }

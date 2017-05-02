@@ -11,6 +11,10 @@
   @media (max-width: 1000px) {
     position: absolute;
     transform: translate(-270px, 0);
+
+    &.sidebarExpanded {
+      transform: translate(0, 0);
+    }
   }
 }
 
@@ -43,4 +47,5 @@
   font-weight: 500;
   margin: 20px 10px 0;
   padding: 0 10px;
+  text-decoration: none;
 }
