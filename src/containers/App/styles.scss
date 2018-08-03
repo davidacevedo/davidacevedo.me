@@ -1,9 +1,11 @@
-@import 'sanitize.css/sanitize.css';
+@import '~sanitize.css/sanitize.css';
 
-* {
-    color: #3c4350;
-    font-family: Roboto;
-}
+:global {
+    body: {
+        color: #3c4350;
+        font-family: Roboto;
+    }
+};
 
 .app {
     align-items: center;

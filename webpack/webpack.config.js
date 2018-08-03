@@ -73,7 +73,9 @@ const config = {
         {
           loader: 'postcss-loader',
           options: {
-            config: `${__dirname}/postcss.config.js`
+            config: {
+              path: `${__dirname}/postcss.config.js`,
+            }
           }
         },
         'resolve-url-loader',
