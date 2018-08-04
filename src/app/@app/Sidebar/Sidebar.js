@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { Link } from 'react-router';
 
 import profile from './assets/sidebar-pic.jpg';
-import styles from './styles.scss';
+import styles from './Sidebar.scss';
 
 export default class Sidebar extends Component {
   static contextTypes = {
@@ -22,7 +22,8 @@ export default class Sidebar extends Component {
         </div>
         
         <Link className={styles.about} onClick={closeSidebar} to="/">About</Link>
-        <Link className={styles.about} onClick={closeSidebar} to="/test">Test</Link>
+        <Link className={styles.about} onClick={closeSidebar} to="/projects">Projects</Link>
+        <Link className={styles.about} onClick={closeSidebar} to="/photosphere">Photosphere</Link>
       </div>
     )
   }

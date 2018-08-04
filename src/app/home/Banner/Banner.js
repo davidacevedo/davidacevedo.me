@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import Polaroid from './Polaroid';
 
-import styles from './styles.scss';
+import styles from './Banner.scss';
 
 export default class Banner extends Component {
   render() {
     return (
       <div className={styles.profile}>
-        {/*<Polaroid />*/}
         <div className={styles.textContent}>
           <div className={styles.title}>
             <div>Hello!</div>

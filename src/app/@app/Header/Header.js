@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 import profile from './assets/profile.jpg';
 import hamburger from './assets/hamburger.svg';
 
-import styles from './styles.scss';
+import styles from './Header.scss';
 
 export default class Header extends Component {
   static contextTypes = {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Header from 'components/Header';
-import Sidebar from 'components/Sidebar';
+import Header from './Header/Header';
+import Sidebar from './Sidebar/Sidebar';
 
-import styles from './styles.scss';
+import styles from './App.scss';
 
 export default class App extends Component {
   state = {

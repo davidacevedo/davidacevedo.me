@@ -6,7 +6,7 @@ const OrbitControls = orbitControls(THREE);
 
 import image from './assets/equirect.png';
 
-import styles from './styles.scss';
+import styles from './Photosphere.scss';
 
 export default class Photosphere extends Component {
 

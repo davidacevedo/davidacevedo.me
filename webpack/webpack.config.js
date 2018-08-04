@@ -20,6 +20,7 @@ const config = {
     modules: ['node_modules'],
     extensions: ['.jsx', '.js', '.json', '.scss'],
     alias: {
+      app: `${__dirname}/../src/app`,
       components: `${__dirname}/../src/components`,
       containers: `${__dirname}/../src/containers`,
       utils: `${__dirname}/../src/utils`,
